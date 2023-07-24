@@ -50,6 +50,13 @@
       font-size: 28px;
       font-weight: bold;
       margin-bottom: 20px;
+      text-align: center; /* Center the title text */
+    }
+
+    .container-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the containers horizontally */
     }
 
     .container {
@@ -110,50 +117,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Load Roboto font from Google Fonts -->
 </head>
 <body>
-  <div class="top-buttons">
-    <button>Projects</button>
-    <button>Contact Me</button>
-    <button>CV</button>
-  </div>
-
-  <div class="biography">
-    <img src="your_photo.jpg" alt="Your Photo">
-    <p>
-      Hi, I'm [Your Name]. I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
-    </p>
-  </div>
-
-  <div class="container-wrapper">
-    <h2 class="projects-title">Projects</h2>
-    <div class="container">
-      <div class="project-info">
-        <h1>Project Title 1</h1>
-        <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
-        <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
-        <div class="buttons">
-          <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
-          <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
+    <div class="top-buttons">
+        <button>Projects</button>
+        <button>Contact Me</button>
+        <button>CV</button>
+      </div>
+    
+      <div class="biography">
+        <img src="your_photo.jpg" alt="Your Photo">
+        <p>
+          Hi, I'm [Your Name]. I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
+        </p>
+      </div>
+    
+      <div class="container-wrapper">
+        <h2 class="projects-title">Projects</h2>
+        <div class="container">
+          <div class="project-info">
+            <h1>Project Title 1</h1>
+            <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
+            <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+            <div class="buttons">
+              <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
+              <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="Imagem1.png" alt="Project Image 1">
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="project-info">
+            <h1>Project Title 2</h1>
+            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <div class="buttons">
+                <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+                <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="Imagem2.png" alt="Project Image 2">
+          </div>
         </div>
       </div>
-      <div class="project-image">
-        <img src="Imagem1.png" alt="Project Image 1">
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="project-info">
-        <h1>Project Title 2</h1>
-        <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
-        <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
-        <div class="buttons">
-            <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
-            <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
-        </div>
-      </div>
-      <div class="project-image">
-        <img src="Imagem2.png" alt="Project Image 2">
-      </div>
-    </div>
-  </div>
 </body>
 </html>
