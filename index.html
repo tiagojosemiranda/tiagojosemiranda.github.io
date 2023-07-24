@@ -12,6 +12,7 @@
       flex-direction: column;
       height: 100vh;
       background-color: #f0f0f0;
+      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
     }
 
     .top-buttons {
@@ -29,6 +30,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
     }
 
     .biography {
@@ -63,6 +65,7 @@
     .project-info {
       flex: 1;
       padding-right: 20px;
+      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
     }
 
     .project-info h1 {
@@ -78,6 +81,17 @@
     .project-info .keywords {
       font-size: 14px;
       color: #666;
+      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
+    }
+
+    .project-info .buttons {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .project-info .buttons button {
+      margin-right: 10px;
+      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
     }
 
     .project-image {
@@ -93,6 +107,7 @@
       display: block;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Load Roboto font from Google Fonts -->
 </head>
 <body>
   <div class="top-buttons">
@@ -115,6 +130,10 @@
         <h1>Project Title 1</h1>
         <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
         <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+        <div class="buttons">
+          <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
+          <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
+        </div>
       </div>
       <div class="project-image">
         <img src="Imagem1.png" alt="Project Image 1">
@@ -126,6 +145,10 @@
         <h1>Project Title 2</h1>
         <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
         <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+        <div class="buttons">
+            <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+            <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+        </div>
       </div>
       <div class="project-image">
         <img src="Imagem2.png" alt="Project Image 2">
