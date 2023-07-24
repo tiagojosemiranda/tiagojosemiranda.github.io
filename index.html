@@ -9,8 +9,45 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
       background-color: #f0f0f0;
+    }
+
+    .top-buttons {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .top-buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .biography {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .biography img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .projects-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .container {
@@ -19,6 +56,7 @@
       background-color: #ffffff;
       border: 1px solid #ccc;
       padding: 20px;
+      margin-bottom: 20px; /* Add margin between rectangles */
       display: flex;
     }
 
@@ -43,6 +81,9 @@
     }
 
     .project-image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       flex: 1;
     }
 
@@ -54,18 +95,42 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="project-info">
-      <h1>Project Title</h1>
-      <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
-      <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+  <div class="top-buttons">
+    <button>Projects</button>
+    <button>Contact Me</button>
+    <button>CV</button>
+  </div>
+
+  <div class="biography">
+    <img src="your_photo.jpg" alt="Your Photo">
+    <p>
+      Hi, I'm [Your Name]. I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
+    </p>
+  </div>
+
+  <div class="container-wrapper">
+    <h2 class="projects-title">Projects</h2>
+    <div class="container">
+      <div class="project-info">
+        <h1>Project Title 1</h1>
+        <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
+        <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+      </div>
+      <div class="project-image">
+        <img src="Imagem1.png" alt="Project Image 1">
+      </div>
     </div>
-    <div class="project-image">
-      <img src="Imagem1.png" alt="Project Image">
+
+    <div class="container">
+      <div class="project-info">
+        <h1>Project Title 2</h1>
+        <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+        <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+      </div>
+      <div class="project-image">
+        <img src="Imagem2.png" alt="Project Image 2">
+      </div>
     </div>
   </div>
-  
-  <h1>Hello World</h1>
-  <p>I'm hosted on GitHub Pages.</p>
 </body>
 </html>
