@@ -1,7 +1,71 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Project Information</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      display: flex;
+    }
+
+    .project-info {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .project-info h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .project-info .keywords {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .project-image {
+      flex: 1;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted in GitHub Pages.</p>
+  <div class="container">
+    <div class="project-info">
+      <h1>Project Title</h1>
+      <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
+      <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+    </div>
+    <div class="project-image">
+      <img src="path/to/your/image.jpg" alt="Project Image">
+    </div>
+  </div>
+  
+  <h1>Hello World</h1>
+  <p>I'm hosted on GitHub Pages.</p>
 </body>
 </html>
