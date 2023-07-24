@@ -25,12 +25,12 @@
       padding: 10px 20px;
       font-size: 16px;
       font-weight: bold;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
+      background-color: transparent; /* Set the background color to transparent */
+      color: #007bff; /* Set the text color */
+      border: none; /* Remove the border */
       border-radius: 5px;
       cursor: pointer;
-      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
+      font-family: "Roboto", sans-serif;
     }
 
     .biography {
@@ -47,16 +47,16 @@
     }
 
     .projects-title {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
       margin-bottom: 20px;
-      text-align: center; /* Center the title text */
+      text-align: center;
     }
 
     .container-wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center the containers horizontally */
+      align-items: center;
     }
 
     .container {
@@ -65,14 +65,16 @@
       background-color: #ffffff;
       border: 1px solid #ccc;
       padding: 20px;
-      margin-bottom: 20px; /* Add margin between rectangles */
+      margin-bottom: 20px;
       display: flex;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     .project-info {
       flex: 1;
       padding-right: 20px;
-      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
+      font-family: "Roboto", sans-serif;
     }
 
     .project-info h1 {
@@ -88,17 +90,25 @@
     .project-info .keywords {
       font-size: 14px;
       color: #666;
-      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
+      font-family: "Roboto", sans-serif;
     }
 
     .project-info .buttons {
       display: flex;
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     .project-info .buttons button {
       margin-right: 10px;
-      font-family: "Roboto", sans-serif; /* Apply Roboto font to the entire page */
+      font-family: "Roboto", sans-serif;
+      background-color: transparent; /* Set the background color to transparent */
+      color: #007bff; /* Set the text color */
+      border: 2px solid #007bff; /* Add a border */
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     .project-image {
@@ -112,55 +122,56 @@
       max-width: 100%;
       height: auto;
       display: block;
+      border-radius: 8px;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Load Roboto font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="top-buttons">
-        <button>Projects</button>
-        <button>Contact Me</button>
-        <button>CV</button>
-      </div>
-    
-      <div class="biography">
-        <img src="your_photo.jpg" alt="Your Photo">
-        <p>
-          Hi, I'm [Your Name]. I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
-        </p>
-      </div>
-    
-      <div class="container-wrapper">
-        <h2 class="projects-title">Projects</h2>
-        <div class="container">
-          <div class="project-info">
-            <h1>Project Title 1</h1>
-            <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
-            <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
-            <div class="buttons">
-              <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
-              <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
-            </div>
-          </div>
-          <div class="project-image">
-            <img src="Imagem1.png" alt="Project Image 1">
-          </div>
-        </div>
-    
-        <div class="container">
-          <div class="project-info">
-            <h1>Project Title 2</h1>
-            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
-            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
-            <div class="buttons">
-                <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
-                <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
-            </div>
-          </div>
-          <div class="project-image">
-            <img src="Imagem2.png" alt="Project Image 2">
-          </div>
+  <div class="top-buttons">
+    <button>Projects</button>
+    <button>Contact Me</button>
+    <button>CV</button>
+  </div>
+
+  <div class="biography">
+    <img src="your_photo.jpg" alt="Your Photo">
+    <p>
+      Hi, I'm [Your Name]. I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
+    </p>
+  </div>
+
+  <div class="container-wrapper">
+    <h2 class="projects-title">Projects</h2>
+    <div class="container">
+      <div class="project-info">
+        <h1>Project Title 1</h1>
+        <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
+        <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+        <div class="buttons">
+          <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
+          <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
         </div>
       </div>
+      <div class="project-image">
+        <img src="Imagem1.png" alt="Project Image 1">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="project-info">
+        <h1>Project Title 2</h1>
+        <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+        <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+        <div class="buttons">
+            <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+            <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="Imagem2.png" alt="Project Image 2">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
