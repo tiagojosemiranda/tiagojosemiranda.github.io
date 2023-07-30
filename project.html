@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Information</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /*background-color: #fdf8eb; Updated background color to a nicer shade of beige */ 
+      background-color: #f6f7f8;
+      font-family: "Roboto", sans-serif;
+    }
+
+    /* Updated text color to black for all elements with class 'top-buttons' */
+    .top-buttons {
+      display: flex;
+      justify-content: center; /* Center the top buttons horizontally */
+      margin-bottom: 30px; /* Added more padding below the top-buttons */
+      color: #000;
+    }
+
+    .top-buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: transparent;
+      color: #000; /* Set the text color to black */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .biography {
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      margin: 40px; /* Added more padding around the biography */
+      text-align: center;
+    }
+
+    .biography-container {
+      width: 100%;
+      display: flex; /* Use flexbox to arrange the image and text side by side */
+      align-items: center; /* Center the content vertically */
+      max-width: 1200px; /* Increased the width of the container */
+      margin: 0 auto; /* Center the container horizontally and extend to the edges of the window */
+      text-align: left;
+    }
+
+    .biography img {
+      width: 300px; /* Updated the width to make 'your_photo' bigger */
+      height: 300px; /* Updated the height to make 'your_photo' bigger */
+      margin-right: 130px; /* Added more space between the image and the text */
+    }
+
+    .biography-text {
+      flex: 1; /* Allow the text to take the remaining available space */
+    }
+
+    .biography-text h1 {
+      font-size: 36px; /* Increased the font size of the "Hi, I'm Tiago Miranda" text */
+      font-weight: bold;
+      color: #000; /* Set the text color to black */
+      margin-bottom: 10px;
+    }
+
+    .biography-text p {
+      font-size: 16px;
+      color: #000; /* Set the text color to black */
+      margin-bottom: 10px;
+    }
+
+    .projects-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #000; /* Set the text color to black */
+    }
+
+    .other-projects-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #000; /* Set the text color to black */
+    }
+
+    .container-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container { /* container for projects */
+      width: 80%; /* Extend the container to the edges of the window */
+      max-width: 800px; /* Set a maximum width for the container */
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .project-info {
+      flex: 1;
+      padding-right: 20px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .project-info h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .project-info .keywords {
+      font-size: 14px;
+      color: #666;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .project-info .buttons {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .project-info .buttons button {
+      margin-right: 10px;
+      font-family: "Roboto", sans-serif;
+      background-color: transparent;
+      color: #000; /* Set the text color to black */
+      border: 2px solid #000; /* Updated border color to black */
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .project-image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Sliding Gallery Styles */
+    .sliding-gallery {
+      align-items: center; /* Center the content vertically */
+      overflow: hidden; /* Hide the content that overflows the container */
+      width: 50%; /* Occupy the full width of the parent container */
+      position: relative; /* To position the navigation buttons */
+      margin: 0 auto; /* Center the gallery horizontally */
+    }
+
+    .gallery-container {
+      align-items: center; /* Center the content vertically */
+      display: flex; /* Make the projects side by side */
+      justify-content: center; /* Center the projects horizontally */
+      transition: transform 0.5s; /* Add a smooth transition effect for sliding */
+      width: 200%; /* Double the width to accommodate both project containers */
+    }
+
+    .gallery-container .container {
+      width: 50%; /* Set half the width of the previous containers */
+    }
+
+    /* Navigation Buttons Styles */
+    .navigation-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .navigation-buttons button {
+      font-family: "Roboto", sans-serif;
+      background-color: transparent;
+      color: #000; /* Set the text color to black */
+      border: 2px solid #000; /* Updated border color to black */
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 20px;
+    }
+
+    /* Sliding Effect */
+    .sliding-gallery.show-first .gallery-container {
+      transform: translateX(0); /* Show the first set of projects */
+    }
+
+    .sliding-gallery.show-second .gallery-container {
+      transform: translateX(-50%); /* Show the second set of projects */
+    }
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const gallery = document.querySelector(".gallery-container");
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+
+      let currentIndex = 0;
+
+      prevButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateGallery();
+        }
+      });
+
+      nextButton.addEventListener("click", function () {
+        const totalProjects = gallery.children.length;
+        if (currentIndex < totalProjects - 2) {
+          currentIndex++;
+          updateGallery();
+        }
+      });
+
+      function updateGallery() {
+        const slideAmount = currentIndex * -50;
+        gallery.style.transform = `translateX(${slideAmount}%)`;
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="top-buttons">
+    <button>Projects</button>
+    <button>Contact Me</button>
+    <button>CV</button>
+  </div>
+
+  <div class="biography">
+    <div class="biography-container">
+      <img src="your_photo.jpg" alt="Your Photo">
+      <div class="biography-text">
+        <h1>Hi, I'm Tiago Miranda</h1>
+        <p>
+          I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-wrapper">
+    <h2 class="projects-title">Projects</h2>
+    <div class="container">
+      <div class="project-info">
+        <h1>Project Title 1</h1>
+        <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
+        <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
+        <div class="buttons">
+          <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
+          <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="Imagem1.png" alt="Project Image 1">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="project-info">
+        <h1>Project Title 2</h1>
+        <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+        <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+        <div class="buttons">
+            <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+            <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="Imagem2.png" alt="Project Image 2">
+      </div>
+    </div>
+
+    <div class="sliding-gallery">
+      <h2 class="other-projects-title">Other projects</h2>
+      <div class="gallery-container">
+        <div class="container">
+          <div class="project-info">
+            <h1>Project Title 1</h1>
+            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <div class="buttons">
+                <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+                <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="Imagem2.png" alt="Project Image 2">
+          </div>
+        </div>
+  
+        <div class="container">
+          <div class="project-info">
+            <h1>Project Title 2</h1>
+            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <div class="buttons">
+                <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+                <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="Imagem2.png" alt="Project Image 2">
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="project-info">
+            <h1>Project Title 3</h1>
+            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <div class="buttons">
+                <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+                <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="Imagem2.png" alt="Project Image 2">
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="project-info">
+            <h1>Project Title 4</h1>
+            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
+            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <div class="buttons">
+                <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
+                <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="Imagem2.png" alt="Project Image 2">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="navigation-buttons">
+      <button class="prev-button">Previous</button>
+      <button class="next-button">Next</button>
+    </div>
+  </div>
+</body>
+</html>
