@@ -72,9 +72,11 @@
     }
 
     .biography img {
-      width: 300px; /* Updated the width to make 'your_photo' bigger */
-      height: 300px; /* Updated the height to make 'your_photo' bigger */
-      margin-right: 130px; /* Added more space between the image and the text */
+      height: 300px;
+      width: auto; /* Set a fixed width to create an oval shape */
+      border-radius: 50%; /* Set border-radius to 50% to make it oval, to 0% to make it rectangular */
+      border: 0px solid #000; /* Add a black contour with 5px width */
+      margin-right: 130px;
     }
 
     .biography-text {
