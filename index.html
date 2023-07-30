@@ -20,25 +20,45 @@
       justify-content: center; /* Center the top buttons horizontally */
       margin-bottom: 30px; /* Added more padding below the top-buttons */
       color: #000;
+      margin-top: 50px; /* Added margin to create space above the top buttons */
     }
 
     .top-buttons button {
-      margin-right: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: transparent;
-      color: #000; /* Set the text color to black */
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: "Roboto", sans-serif;
+    margin-right: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     }
+    .top-buttons a {
+      margin-right: 30px;
+    }
+    .top-buttons .projects-button,
+    .top-buttons .contact-button {
+      padding: 0; /* Remove the default padding to make the image fit properly */
+    }
+
+    .top-buttons .projects-button img,
+    .top-buttons .contact-button img {
+      height: 25px; /* Set the desired width of the images */
+      width: auto;
+    }
+
+    .top-buttons .cv-button {
+    font-family: "Roboto", sans-serif; /* Use the Roboto font for the CV button */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 
     .biography {
       display: flex;
       justify-content: center; /* Center the content horizontally */
-      margin: 40px; /* Added more padding around the biography */
+      margin: 110px; /* Added more padding around the biography */
       text-align: center;
     }
 
@@ -62,10 +82,10 @@
     }
 
     .biography-text h1 {
-      font-size: 36px; /* Increased the font size of the "Hi, I'm Tiago Miranda" text */
+      font-size: 56px; /* Increased the font size of the "Hi, I'm Tiago Miranda" text */
       font-weight: bold;
       color: #000; /* Set the text color to black */
-      margin-bottom: 10px;
+      margin-bottom: 40px;
     }
 
     .biography-text p {
@@ -199,6 +219,7 @@
       font-size: 16px;
       font-weight: bold;
       margin: 0 20px;
+      margin-bottom: 30px;
     }
 
     /* Sliding Effect */
@@ -244,10 +265,14 @@
 </head>
 <body>
   <div class="top-buttons">
-    <button>Projects</button>
-    <button>Contact Me</button>
-    <button>CV</button>
-  </div>
+    <a class="projects-button" href="https://www.linkedin.com/in/tiagojosemiranda/" target="_blank">
+      <img src="linkedin.png">
+    </a>
+    <a class="contact-button" href="https://github.com/tiagojosemiranda" target="_blank">
+      <img src="Github.png">
+    </a>
+    <a class="cv-button" href="https://google.com" target="_blank">CV</a>
+</div>
 
   <div class="biography">
     <div class="biography-container">
@@ -269,7 +294,7 @@
         <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
         <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
         <div class="buttons">
-          <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
+          <a class="info-button" href="tiagojosemiranda.github.io/project.html" target="_blank"><button>More Information</button></a>
           <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
         </div>
       </div>

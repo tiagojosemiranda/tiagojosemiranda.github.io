@@ -20,148 +20,68 @@
       justify-content: center; /* Center the top buttons horizontally */
       margin-bottom: 30px; /* Added more padding below the top-buttons */
       color: #000;
+      margin-top: 50px; /* Added margin to create space above the top buttons */
     }
 
     .top-buttons button {
-      margin-right: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: transparent;
-      color: #000; /* Set the text color to black */
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: "Roboto", sans-serif;
+    margin-right: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    }
+    .top-buttons a {
+      margin-right: 30px;
+    }
+    .top-buttons .projects-button,
+    .top-buttons .contact-button {
+      padding: 0; /* Remove the default padding to make the image fit properly */
     }
 
-    .biography {
-      display: flex;
-      justify-content: center; /* Center the content horizontally */
-      margin: 40px; /* Added more padding around the biography */
+    .top-buttons .projects-button img,
+    .top-buttons .contact-button img {
+      height: 25px; /* Set the desired width of the images */
+      width: auto;
+    }
+
+    .top-buttons .cv-button {
+    font-family: "Roboto", sans-serif; /* Use the Roboto font for the CV button */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+   /* Add styles for the project information container */
+   .project-info {
+    justify-content: center;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto; /* Add this line to center the container horizontally */
+    margin-top: 50px;
+    }
+
+    .project-title {
+      font-size: 44px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
     }
 
-    .biography-container {
-      width: 100%;
-      display: flex; /* Use flexbox to arrange the image and text side by side */
-      align-items: center; /* Center the content vertically */
-      max-width: 1200px; /* Increased the width of the container */
-      margin: 0 auto; /* Center the container horizontally and extend to the edges of the window */
-      text-align: left;
-    }
-
-    .biography img {
-      width: 300px; /* Updated the width to make 'your_photo' bigger */
-      height: 300px; /* Updated the height to make 'your_photo' bigger */
-      margin-right: 130px; /* Added more space between the image and the text */
-    }
-
-    .biography-text {
-      flex: 1; /* Allow the text to take the remaining available space */
-    }
-
-    .biography-text h1 {
-      font-size: 36px; /* Increased the font size of the "Hi, I'm Tiago Miranda" text */
-      font-weight: bold;
-      color: #000; /* Set the text color to black */
-      margin-bottom: 10px;
-    }
-
-    .biography-text p {
+    .project-description {
       font-size: 16px;
       color: #000; /* Set the text color to black */
       margin-bottom: 10px;
     }
 
-    .projects-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #000; /* Set the text color to black */
-    }
 
-    .other-projects-title {
-      font-size: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #000; /* Set the text color to black */
-    }
-
-    .container-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .container { /* container for projects */
-      width: 80%; /* Extend the container to the edges of the window */
-      max-width: 800px; /* Set a maximum width for the container */
-      background-color: #ffffff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin-bottom: 20px;
-      display: flex;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .project-info {
-      flex: 1;
-      padding-right: 20px;
-      font-family: "Roboto", sans-serif;
-    }
-
-    .project-info h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .project-info p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .project-info .keywords {
-      font-size: 14px;
-      color: #666;
-      font-family: "Roboto", sans-serif;
-    }
-
-    .project-info .buttons {
-      display: flex;
-      margin-top: 20px;
-    }
-
-    .project-info .buttons button {
-      margin-right: 10px;
-      font-family: "Roboto", sans-serif;
-      background-color: transparent;
-      color: #000; /* Set the text color to black */
-      border: 2px solid #000; /* Updated border color to black */
-      border-radius: 5px;
-      cursor: pointer;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .project-image {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex: 1;
-    }
-
-    .project-image img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Sliding Gallery Styles */
-    .sliding-gallery {
+  /* Add styles for the sliding gallery (updated) */
+  .sliding-gallery {
       align-items: center; /* Center the content vertically */
       overflow: hidden; /* Hide the content that overflows the container */
       width: 50%; /* Occupy the full width of the parent container */
@@ -178,10 +98,10 @@
     }
 
     .gallery-container .container {
-      width: 50%; /* Set half the width of the previous containers */
+      width: 100%; /* Set half the width of the previous containers */
     }
 
-    /* Navigation Buttons Styles */
+    /* Navigation Buttons Styles (updated) */
     .navigation-buttons {
       display: flex;
       justify-content: center;
@@ -199,9 +119,10 @@
       font-size: 16px;
       font-weight: bold;
       margin: 0 20px;
+      margin-bottom: 50px;
     }
 
-    /* Sliding Effect */
+    /* Sliding Effect (updated) */
     .sliding-gallery.show-first .gallery-container {
       transform: translateX(0); /* Show the first set of projects */
     }
@@ -212,6 +133,7 @@
 
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const gallery = document.querySelector(".gallery-container");
@@ -241,43 +163,49 @@
       }
     });
   </script>
+  
 </head>
 <body>
   <div class="top-buttons">
-    <button>Projects</button>
-    <button>Contact Me</button>
-    <button>CV</button>
-  </div>
+    <a class="projects-button" href="https://www.linkedin.com/in/tiagojosemiranda/" target="_blank">
+      <img src="linkedin.png">
+    </a>
+    <a class="contact-button" href="https://github.com/tiagojosemiranda" target="_blank">
+      <img src="Github.png">
+    </a>
+    <a class="cv-button" href="https://google.com" target="_blank">CV</a>
+</div>
 
-  <div class="biography">
-    <div class="biography-container">
-      <img src="your_photo.jpg" alt="Your Photo">
-      <div class="biography-text">
-        <h1>Hi, I'm Tiago Miranda</h1>
-        <p>
-          I am a passionate developer with a keen interest in web development. In my spare time, I love working on personal projects and exploring new technologies.
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <div class="container-wrapper">
-    <h2 class="projects-title">Projects</h2>
+<div class="project-info">
+  <div class="project-title">Project XYZ</div>
+  <div class="project-description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur justo in faucibus faucibus. Maecenas interdum mi non tortor commodo blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur justo in faucibus faucibus. Maecenas interdum mi non tortor commodo blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur justo in faucibus faucibus. Maecenas interdum mi non tortor commodo blandit.
+  </div>
+</div>
+
+
+<div class="sliding-gallery show-first">
+  <div class="gallery-container">
     <div class="container">
-      <div class="project-info">
-        <h1>Project Title 1</h1>
-        <p>Brief description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lorem ac nisi vulputate ullamcorper.</p>
-        <p class="keywords">Keywords: Project, Description, Keywords, Lorem Ipsum</p>
-        <div class="buttons">
-          <a class="info-button" href="https://more_info_url_1" target="_blank"><button>More Information</button></a>
-          <a class="code-button" href="https://your_project_url_1" target="_blank"><button>Code</button></a>
-        </div>
-      </div>
-      <div class="project-image">
-        <img src="Imagem1.png" alt="Project Image 1">
-      </div>
+      <img class="slide-image" src="Imagem1.png" alt="Image 1">
     </div>
-
+    <div class="container">
+      <img class="slide-image" src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Imagem1.png" alt="Image 3">
+    </div>
+    <!-- Add more containers with images here as needed -->
   </div>
+
+  <!-- Navigation buttons -->
+  <div class="navigation-buttons">
+    <button class="prev-button">Previous</button>
+    <button class="next-button">Next</button>
+  </div>
+</div>
+
+
 </body>
 </html>
