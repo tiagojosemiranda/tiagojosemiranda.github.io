@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Information</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /*background-color: #fdf8eb; Updated background color to a nicer shade of beige */ 
+      background-color: #f6f7f8;
+      font-family: "Roboto", sans-serif;
+    }
+
+    /* Updated text color to black for all elements with class 'top-buttons' */
+    .top-buttons {
+      display: flex;
+      justify-content: center; /* Center the top buttons horizontally */
+      margin-bottom: 30px; /* Added more padding below the top-buttons */
+      color: #000;
+      margin-top: 50px; /* Added margin to create space above the top buttons */
+    }
+
+    .top-buttons button {
+    margin-right: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    }
+    .top-buttons a {
+      margin-right: 30px;
+    }
+    .top-buttons .projects-button,
+    .top-buttons .contact-button {
+      padding: 0; /* Remove the default padding to make the image fit properly */
+    }
+
+    .top-buttons .projects-button img,
+    .top-buttons .contact-button img {
+      height: 25px; /* Set the desired width of the images */
+      width: auto;
+    }
+
+    .top-buttons .cv-button {
+    font-family: "Roboto", sans-serif; /* Use the Roboto font for the CV button */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+   /* Add styles for the project information container */
+   .project-info {
+    justify-content: center;
+    width: 75%;
+    text-align: left;
+    margin: 0 auto; /* Add this line to center the container horizontally */
+    margin-top: 50px;
+    }
+
+    .project-title {
+      font-size: 44px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .project-description {
+      font-size: 16px;
+      color: #000; /* Set the text color to black */
+      margin-bottom: 10px;
+    }
+
+
+  /* Add styles for the sliding gallery (updated) */
+  .sliding-gallery {
+      align-items: center; /* Center the content vertically */
+      overflow: hidden; /* Hide the content that overflows the container */
+      width: 50%; /* Occupy the full width of the parent container */
+      position: relative; /* To position the navigation buttons */
+      margin: 0 auto; /* Center the gallery horizontally */
+    }
+
+    .gallery-container {
+      align-items: center; /* Center the content vertically */
+      display: flex; /* Make the projects side by side */
+      justify-content: center; /* Center the projects horizontally */
+      transition: transform 0.5s; /* Add a smooth transition effect for sliding */
+      width: 200%; /* Double the width to accommodate both project containers */
+    }
+
+    .gallery-container .container {
+      width: 100%; /* Set half the width of the previous containers */
+    }
+
+    /* Navigation Buttons Styles (updated) */
+    .navigation-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .navigation-buttons button {
+      font-family: "Roboto", sans-serif;
+      background-color: transparent;
+      color: #000; /* Set the text color to black */
+      border: 2px solid #000; /* Updated border color to black */
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    /* Sliding Effect (updated) */
+    .sliding-gallery.show-first .gallery-container {
+      transform: translateX(0); /* Show the first set of projects */
+    }
+
+    .sliding-gallery.show-second .gallery-container {
+      transform: translateX(-50%); /* Show the second set of projects */
+    }
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const gallery = document.querySelector(".gallery-container");
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+
+      let currentIndex = 0;
+
+      prevButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateGallery();
+        }
+      });
+
+      nextButton.addEventListener("click", function () {
+        const totalProjects = gallery.children.length;
+        if (currentIndex < totalProjects - 2) {
+          currentIndex++;
+          updateGallery();
+        }
+      });
+
+      function updateGallery() {
+        const slideAmount = currentIndex * -50;
+        gallery.style.transform = `translateX(${slideAmount}%)`;
+      }
+    });
+  </script>
+  
+</head>
+<body>
+  <div class="top-buttons">
+    <a class="projects-button" href="https://www.linkedin.com/in/tiagojosemiranda/" target="_blank">
+      <img src="linkedin.png">
+    </a>
+    <a class="contact-button" href="https://github.com/tiagojosemiranda" target="_blank">
+      <img src="Github.png">
+    </a>
+    <a class="cv-button" href="https://google.com" target="_blank">CV</a>
+</div>
+
+
+<div class="project-info">
+  <div class="project-title">Banana ripeness classification</div>
+  <div class="project-description">
+    <p>In </p>
+  </div>
+</div>
+
+
+<div class="sliding-gallery show-first">
+  <div class="gallery-container">
+    <div class="container">
+      <img class="slide-image" src="Imagem1.png" alt="Image 1">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Imagem1.png" alt="Image 3">
+    </div>
+    <!-- Add more containers with images here as needed -->
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="navigation-buttons">
+    <button class="prev-button">Previous</button>
+    <button class="next-button">Next</button>
+  </div>
+</div>
+
+
+</body>
+</html>
