@@ -183,7 +183,20 @@
       border-radius: 8px;
     }
 
-    /* Sliding Gallery Styles */
+    
+
+  .small-projects-container {
+    width: 50%; /* Set each project container to occupy 50% width */
+    max-width: 400px; /* Set a maximum width for the container */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-right: 20px; /* Add spacing between project containers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+/* Sliding Gallery Styles */
     .sliding-gallery {
       align-items: center; /* Center the content vertically */
       overflow: hidden; /* Hide the content that overflows the container */
@@ -195,6 +208,7 @@
     .gallery-container {
       align-items: center; /* Center the content vertically */
       display: flex; /* Make the projects side by side */
+      flex-wrap: nowrap; /* Prevent projects from wrapping onto a new line */
       justify-content: center; /* Center the projects horizontally */
       transition: transform 0.5s; /* Add a smooth transition effect for sliding */
       width: 200%; /* Double the width to accommodate both project containers */
@@ -299,7 +313,9 @@
         <div class="buttons">
           <a class="info-button" href="https://tiagojosemiranda.github.io/Bananas" target="_blank"><button>More Information</button></a>
           <a class="code-button" href="https://github.com/tiagojosemiranda/Banana_ripeness" target="_blank"><button>Code</button></a>
+          <img src="python_logo.png" alt="Python logo" width="50" height="auto" style="margin-left:25px">
         </div>
+       
       </div>
       <div class="project-image">
         <img src="banana_tinder.png" alt="Project Image 1">
@@ -314,6 +330,7 @@
         <div class="buttons">
             <a class="info-button" href="https://more_info_url_2" target="_blank"><button>More Information</button></a>
             <a class="code-button" href="https://your_project_url_2" target="_blank"><button>Code</button></a>
+            <img src="python_logo.png" alt="Python logo" width="50" height="auto" style="margin-left:25px">
         </div>
       </div>
       <div class="project-image">
@@ -330,6 +347,8 @@
         <div class="buttons">
             <a class="info-button" href="https://tiagojosemiranda.github.io/ECMI_Insurance" target="_blank"><button>More Information</button></a>
             <a class="code-button" href="https://github.com/tiagojosemiranda/ECMI_insurance" target="_blank"><button>Code</button></a>
+            <img src="python_logo.png" alt="Python logo" width="50" height="auto" style="margin-left:10px">
+            <img src="Rlogo.png" alt="R logo" width="50" height="auto" style="margin-left:10px">
         </div>
       </div>
       <div class="project-image">
@@ -345,6 +364,7 @@
         <div class="buttons">
             <a class="info-button" href="https://tiagojosemiranda.github.io/Giro" target="_blank"><button>More Information</button></a>
             <a class="code-button" href="https://github.com/tiagojosemiranda/Giro" target="_blank"><button>Code</button></a>
+            <img src="python_logo.png" alt="Python logo" width="50" height="auto" style="margin-left:25px">
         </div>
       </div>
       <div class="project-image">
@@ -353,40 +373,68 @@
     </div>
 
 
+
     <div class="sliding-gallery">
       <h2 class="other-projects-title">Other projects</h2>
       <div class="gallery-container">
-        <div class="container">
+        <div class="small-projects-container">
           <div class="project-info">
-            <h1>Project Title 1</h1>
-            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
-            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <h1>Autoregressive forecast</h1>
+            <p> Implemented dimensionality reduction techniques (PCR and PLS) and SARIMA (Seasonal Auto-Regressive Integrated Moving 
+              Average) models to forecast current flows in a eletric line from the available data on the wind power injected and past currents.</p>
+            <p class="keywords">Keywords: Smart grids, Data analytics, Time series, Electric circuits, Python</p>
           </div>
         </div>
   
-        <div class="container">
+        <div class="small-projects-container">
           <div class="project-info">
-            <h1>Project Title 2</h1>
-            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
-            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <h1>Electric phase identification</h1>
+            <p> Phase identification (identify the phase connectivity information of single phase connected customers) from three-phase voltage metering data.</p>
+            <p class="keywords">Keywords: Smart grids, Data analytics, Dimensionality reduction, Electric circuits, Python</p>
           </div>
         </div>
 
-        <div class="container">
+        <div class="small-projects-container">
           <div class="project-info">
-            <h1>Project Title 3</h1>
-            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
-            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <h1>'Roll the ball' puzzle</h1>
+            <p> Searched for a solution, if any, for any given ‘Roll the Ball’ puzzle initial configuration.</p>
+            <p class="keywords">Keywords: AI, Search algorithms, Heuristics, Decision systems, Python</p>
           </div>
         </div>
 
-        <div class="container">
+        <div class="small-projects-container">
           <div class="project-info">
-            <h1>Project Title 4</h1>
-            <p>Another brief description of the second project. Quisque tincidunt nunc in arcu ultrices, id faucibus turpis tincidunt.</p>
-            <p class="keywords">Keywords: Second Project, Description, Keywords, Quisque</p>
+            <h1>Analysis of Gene-Expression Data</h1>
+            <p> Analyzed Gene-Expression Data of Large B-Cell Lymphoma for survival analysis and to build a predictor of the success of a given chemotherapy treatment.</p>
+            <p class="keywords">Keywords: Multivariate analysis, Dimensionality reduction, Clustering, R</p>
         </div>
       </div>
+
+      <div class="small-projects-container">
+        <div class="project-info">
+          <h1>Database and information system for a company</h1>
+          <p>Developed a SQL database and a web application for a boat management system.</p>
+          <p class="keywords">Keywords: Database, Web application, Queries, SQL, HTML</p>
+      </div>
+    </div>
+
+      <div class="small-projects-container">
+        <div class="project-info">
+          <h1>Garbage collecting model</h1>
+          <p> Optimized a garbage collecting operation (to and from the recycling plant and necessary stops) given observational data. </p>
+          <p class="keywords">Keywords: Decision making, Reinforcement Learning, Markov Chains, Python</p>
+      </div>
+    </div>
+
+      <div class="small-projects-container">
+        <div class="project-info">
+          <h1>COVID-19 impact on diabetes program</h1>
+          <p>Determined the impact of COVID-19 on diabetes program activity and controls from Portugal's SNS.</p>
+          <p class="keywords">Keywords: Biostatistics, Hypothesis testing, EDA, R</p>
+      </div>
+    </div>
+
+
     </div>
   
     <div class="navigation-buttons">
