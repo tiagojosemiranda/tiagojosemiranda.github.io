@@ -124,6 +124,13 @@
       width: 100%; /* Set half the width of the previous containers */
     }
 
+    .slide-image {
+    width: 100%; /* Limit the maximum width of the images */
+    height: auto; /* Allow the height to adjust proportionally */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
     /* Navigation Buttons Styles (updated) */
     .navigation-buttons {
       display: flex;
@@ -215,7 +222,7 @@
 </div>
 
 <div class="video-container">
-  <iframe width="640" height="360" src="https://youtu.be/yYcyacLRPNs" frameborder="0" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/yYcyacLRPNs" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div class="pdf-container">
@@ -225,15 +232,20 @@
 <div class="sliding-gallery show-first">
   <div class="gallery-container">
     <div class="container">
-      <img class="slide-image" src="Imagem1.png" alt="Image 1">
+      <img class="slide-image" src="banana_tinder.png" alt="Image 1">
     </div>
     <div class="container">
-      <img class="slide-image" src="image2.jpg" alt="Image 2">
+      <img class="slide-image" src="banana_class_without.png" alt="Image 2">
     </div>
     <div class="container">
-      <img class="slide-image" src="Imagem1.png" alt="Image 3">
+      <img class="slide-image" src="banana_class_working.png" alt="Image 3">
     </div>
-    <!-- Add more containers with images here as needed -->
+    <div class="container">
+      <img class="slide-image" src="banana_time_machine.png" alt="Image 4">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="banana_about.png" alt="Image 5">
+    </div>
   </div>
 
   <!-- Navigation buttons -->
