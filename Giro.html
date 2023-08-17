@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Information</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /*background-color: #fdf8eb; Updated background color to a nicer shade of beige */ 
+      background-color: #f6f7f8;
+      font-family: "Roboto", sans-serif;
+    }
+
+    /* Updated text color to black for all elements with class 'top-buttons' */
+    .top-buttons {
+      display: flex;
+      justify-content: center; /* Center the top buttons horizontally */
+      margin-bottom: 30px; /* Added more padding below the top-buttons */
+      color: #000;
+      margin-top: 50px; /* Added margin to create space above the top buttons */
+    }
+
+    .top-buttons button {
+    margin-right: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    }
+    .top-buttons a {
+      margin-right: 30px;
+    }
+    .top-buttons .projects-button,
+    .top-buttons .contact-button {
+      padding: 0; /* Remove the default padding to make the image fit properly */
+    }
+
+    .top-buttons .projects-button img,
+    .top-buttons .contact-button img {
+      height: 25px; /* Set the desired width of the images */
+      width: auto;
+    }
+
+    .top-buttons .cv-button {
+    font-family: "Roboto", sans-serif; /* Use the Roboto font for the CV button */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+   /* Add styles for the project information container */
+   .project-info {
+    justify-content: center;
+    width: 75%;
+    text-align: left;
+    margin: 0 auto; /* Add this line to center the container horizontally */
+    margin-top: 50px;
+    }
+
+    .project-title {
+      font-size: 44px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .project-description {
+      font-size: 16px;
+      color: #000; /* Set the text color to black */
+      margin-bottom: 10px;
+    }
+
+    .pdf-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 75px;
+      margin-top: 50px;
+    }
+
+    .pdf-container embed {
+      /*max-width: 80%;*/
+      width: 900px;
+      height: 497px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background-color: #f6f7f8  !important; /* Set the desired background color */
+    }
+
+
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+  <div class="top-buttons">
+    <a class="projects-button" href="https://www.linkedin.com/in/tiagojosemiranda/" target="_blank">
+      <img src="linkedin.png">
+    </a>
+    <a class="contact-button" href="https://github.com/tiagojosemiranda" target="_blank">
+      <img src="Github.png">
+    </a>
+    <a class="cv-button" href="https://google.com" target="_blank">CV</a>
+</div>
+
+
+<div class="project-info">
+  <div class="project-title">Insurance premium calculation</div>
+  <div class="project-description">
+    <p>In actuarial mathematics, one of the main goals is to provide appropriate models for fair premiums to be calculated by means of various statistical methods. Non-life insurance lines such as car insurance, or proprietary insurance are more challenging due to the underlying uncertainty types.</p>
+    <p> </p>
+    <p>Claim sizes and number of claims were separately modelled by statistical distributions and data-fitting methods. This way we calculated the so-called manual premium for a population.</p>
+    <p>We also did an in-depth analysis of risk parameters to cluster individuals in risk classes. From the available user data: gender, geographic region, driving experience etc. we concluded that the only meaningful risk predictor was the user’s driving experience (whether the user has a trial licence, is a beginner driver or an experienced one).</p>
+    <p>One particular challenge when dealing with insurance data and the insurance industry is that there are both ethical and legal constraints on the methods used to calculate premiums. Results must be explainable and statistically sound, so that a given policy holder understands why they pay a certain premium. Moreover, to prevent discrimination, certain characteristics should not be used to separate individuals. Such example are gender and ethnicity, which are forbidden to use in certain countries. Therefore, separating individuals into different risk classes was approached cautiously, only taking into account statistically sound conclusions.</p>
+    <p>Lastly, to consider the user’s previous claim history we calculated Bayesian credibility factors using 2 approaches: European and American credibility methods.</p>
+    <p>   </p>
+    <p>   </p>
+    <p><br><br>This project was developed in ECMI Modelling Week in July, 2023 held in Szeged, Hungary.</p>
+    <p>Instructor: Dora Selesi (University of Novi Sad)</p>
+    <p>Project Team: Arianna Zanin (University of Milan), Koppány Dodony (University of Szeged), Filip Rydin (Chalmers University of Technology), Roeland Hooijmans (Eindhoven University of Technology) and Tiago Miranda (University of Lisbon)</p>
+  </div>
+</div>
+
+
+<div class="pdf-container">
+  <embed src="ECMI_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
+</div>
+
+
+
+</body>
+</html>
