@@ -96,12 +96,97 @@
       background-color: #f6f7f8  !important; /* Set the desired background color */
     }
 
+  /* Add styles for the sliding gallery (updated) */
+  .sliding-gallery {
+      align-items: center; /* Center the content vertically */
+      overflow: hidden; /* Hide the content that overflows the container */
+      width: 50%; /* Occupy the full width of the parent container */
+      position: relative; /* To position the navigation buttons */
+      margin: 0 auto; /* Center the gallery horizontally */
+    }
 
+    .gallery-container {
+      align-items: center; /* Center the content vertically */
+      display: flex; /* Make the projects side by side */
+      justify-content: center; /* Center the projects horizontally */
+      transition: transform 0.5s; /* Add a smooth transition effect for sliding */
+      width: 200%; /* Double the width to accommodate both project containers */
+    }
+
+    .gallery-container .container {
+      width: 50%; /* Set half the width of the previous containers */
+    }
+
+    .slide-image {
+    width: 95%; /* Limit the maximum width of the images */
+    height: auto; /* Allow the height to adjust proportionally */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+    /* Navigation Buttons Styles (updated) */
+    .navigation-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .navigation-buttons button {
+      font-family: "Roboto", sans-serif;
+      background-color: transparent;
+      color: #000; /* Set the text color to black */
+      border: 2px solid #000; /* Updated border color to black */
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    /* Sliding Effect (updated) */
+    .sliding-gallery.show-first .gallery-container {
+      transform: translateX(0); /* Show the first set of projects */
+    }
+
+    .sliding-gallery.show-second .gallery-container {
+      transform: translateX(-50%); /* Show the second set of projects */
+    }
 
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const gallery = document.querySelector(".gallery-container");
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+
+      let currentIndex = 0;
+
+      prevButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateGallery();
+        }
+      });
+
+      nextButton.addEventListener("click", function () {
+        const totalProjects = gallery.children.length;
+        if (currentIndex < totalProjects - 2) {
+          currentIndex++;
+          updateGallery();
+        }
+      });
+
+      function updateGallery() {
+        const slideAmount = currentIndex * -50;
+        gallery.style.transform = `translateX(${slideAmount}%)`;
+      }
+    });
+  </script>
+
 </head>
 <body>
   <div class="top-buttons">
@@ -132,6 +217,60 @@
   <div>
 </div>
 
+
+<h3 style="text-align:center">GUI screenshots for Netflix:</h3> 
+<div class="sliding-gallery show-first">
+  <div class="gallery-container">
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/Netflix janela0.png" alt="Image 1">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/Netflix janela1.png" alt="Image 2">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/Netflix janela2.png" alt="Image 3">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/Netflix janela3.png" alt="Image 4">
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="navigation-buttons">
+    <button class="prev-button">Previous</button>
+    <button class="next-button">Next</button>
+  </div>
+</div>
+
+<h3 style="text-align:center">GUI screenshots for Spotify:</h3> 
+<div class="sliding-gallery show-first">
+  <div class="gallery-container">
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela0.png" alt="Image 1">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela1.png" alt="Image 2">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela 2.png" alt="Image 3">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela 3.png" alt="Image 4">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela4.png" alt="Image 5">
+    </div>
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janeal5.png" alt="Image 6">
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="navigation-buttons">
+    <button class="prev-button">Previous</button>
+    <button class="next-button">Next</button>
+  </div>
+</div>
 
 
 </body>
