@@ -103,13 +103,14 @@
     }
 
 
-  /* Add styles for the sliding gallery (updated) */
-  .sliding-gallery {
+/* Add styles for the sliding gallery (updated) */
+.sliding-gallery {
       align-items: center; /* Center the content vertically */
       overflow: hidden; /* Hide the content that overflows the container */
-      width: 50%; /* Occupy the full width of the parent container */
+      width: 65%; /* Occupy the full width of the parent container */
       position: relative; /* To position the navigation buttons */
       margin: 0 auto; /* Center the gallery horizontally */
+      justify-content: center; /* Center the projects horizontally */
     }
 
     .gallery-container {
@@ -117,19 +118,22 @@
       display: flex; /* Make the projects side by side */
       justify-content: center; /* Center the projects horizontally */
       transition: transform 0.5s; /* Add a smooth transition effect for sliding */
-      width: 200%; /* Double the width to accommodate both project containers */
+      width: 250%; /* Double the width to accommodate both project containers */
     }
 
     .gallery-container .container {
-      width: 50%; /* Set half the width of the previous containers */
+      width: 90%; /* Set half the width of the previous containers */
+      justify-content: center; /* Center the projects horizontally */
     }
 
     .slide-image {
-    width: 95%; /* Limit the maximum width of the images */
-    height: auto; /* Allow the height to adjust proportionally */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+      width: 90%; /* Make sure the image doesn't exceed the container width */
+      height: auto; /* Maintain the image's aspect ratio */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center; /* Center the projects horizontally */
+    }
 
     /* Navigation Buttons Styles (updated) */
     .navigation-buttons {
@@ -145,10 +149,12 @@
       border: 2px solid #000; /* Updated border color to black */
       border-radius: 5px;
       cursor: pointer;
-      padding: 10px 20px;
+      padding: 10px 10px;
+      width: 100px; /* Set a fixed width for both buttons */
       font-size: 16px;
       font-weight: bold;
-      margin: 0 20px;
+      margin-left: 10px;
+      margin-right: 10px;
       margin-bottom: 50px;
     }
 
@@ -188,7 +194,7 @@
       });
 
       function updateGallery() {
-        const slideAmount = currentIndex * -50;
+        const slideAmount = currentIndex * -40;
         gallery.style.transform = `translateX(${slideAmount}%)`;
       }
     });
@@ -247,19 +253,19 @@
 <div class="sliding-gallery show-first">
   <div class="gallery-container">
     <div class="container">
-      <img class="slide-image" src="banana_tinder.png" alt="Image 1">
+      <img class="slide-image" src="Banana_project/banana_tinder.png" alt="Image 1">
     </div>
     <div class="container">
-      <img class="slide-image" src="banana_class_without.png" alt="Image 2">
+      <img class="slide-image" src="Banana_project/banana_class_without.png" alt="Image 2">
     </div>
     <div class="container">
-      <img class="slide-image" src="banana_class_working.png" alt="Image 3">
+      <img class="slide-image" src="Banana_project/banana_class_working.png" alt="Image 3">
     </div>
     <div class="container">
-      <img class="slide-image" src="banana_time_machine.png" alt="Image 4">
+      <img class="slide-image" src="Banana_project/banana_time_machine.png" alt="Image 4">
     </div>
     <div class="container">
-      <img class="slide-image" src="banana_about.png" alt="Image 5">
+      <img class="slide-image" src="Banana_project/banana_about.png" alt="Image 5">
     </div>
   </div>
 
@@ -273,7 +279,7 @@
 
 <h3 style="text-align:center">Project's slideshow presentation:</h3> 
 <div class="pdf-container">
-  <embed src="Bananas_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
+  <embed src="Banana_project/Bananas_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
 </div>
 
 </body>
