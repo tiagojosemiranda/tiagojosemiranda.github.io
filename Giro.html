@@ -116,14 +116,21 @@
 
 
 <div class="project-info">
-  <div class="project-title">Giro</div>
+  <div class="project-title">Video coverage segmentation</div>
   <div class="project-description">
-    <p>In 
-      
+    <p>Large outdoor events like the bicycle race Giro D’Italia follow complex but very well planned “scripts” by the producer/director of the coverage. In particular the director is managing different viewpoints originated from a multitude of video sources such as motorbikes, fixed cameras, drones or helicopters and, at each time instant, they select the best video feed for the viewer. The goal of the project is to automate the classification of each data frame in a set of “type of shots”. These results could then be used to train a model to eventually aid or substitute the director. In this project we focus only on clustering the video data available. </p>
+    <p> </p>
+    <p>The data consisted of video embeddings of each frame (obtained feeding video frames to VGGNet) as well as cyclists’ skeleton data (obtained using 2 pose estimation methods: Openpose and Otherpose).  </p>
+    <p> </p>
+    <p>To cluster the video data available we developed the following pipeline: EDA (Exploratory Data Analysis), Missing values imputation, Dealing with outliers, Dimensionality reduction and Clustering.  </p>
+    <p> </p>
+    <p>Most notably, the missing value imputation was performed using GLRM (Generalized Low Rank Models) given the low rank of the data using the H2o Python library. To reduce the dimensionality of the data we also performed SVD (Singular Value Decomposition) from which we obtained a basis for our dataset. From this, to detect outliers, we calculated the distance of each datapoint to the null space of the basis obtained. Lastly, the clustering was performed using Hierarchical clustering methods. Given this is an Unsupervised Learning problem the number of clusters present in the data was also estimated from it.  </p>
+    <p> </p>
+    <p><br><br>This project was developed by Tiago Miranda and Vasco Carneiro for the Processing Big Data course at Instituto Superior Técnico in Lisbon, Portugal. </p>    
     </div>
 </div>
 
-
+<h3 style="text-align:center">Project's slideshow presentation:</h3> 
 <div class="pdf-container">
   <embed src="Giro_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
 </div>
