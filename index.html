@@ -186,11 +186,11 @@
     
 
   .small-projects-container {
-    width: 50%; /* Set each project container to occupy 50% width */
-    max-width: 400px; /* Set a maximum width for the container */
+    width: 200%; /* Set each project container to occupy 50% width */
+    /*max-width: 800px;  Set a maximum width for the container */
     background-color: #ffffff;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     margin-right: 20px; /* Add spacing between project containers */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -208,14 +208,14 @@
     .gallery-container {
       align-items: center; /* Center the content vertically */
       display: flex; /* Make the projects side by side */
-      flex-wrap: nowrap; /* Prevent projects from wrapping onto a new line */
       justify-content: center; /* Center the projects horizontally */
       transition: transform 0.5s; /* Add a smooth transition effect for sliding */
-      width: 200%; /* Double the width to accommodate both project containers */
+      width: 350%; /* because it's 7 projects with each occupying 50% width */
+      height: auto;
     }
 
     .gallery-container .container {
-      width: 50%; /* Set half the width of the previous containers */
+      width: 100%; /* Set half the width of the previous containers */
     }
 
     /* Navigation Buttons Styles */
@@ -274,7 +274,7 @@
       });
 
       function updateGallery() {
-        const slideAmount = currentIndex * -50;
+        const slideAmount = currentIndex * -28.57; /* because it's 7 projects so 100/7 *2 = 28.57 */ 
         gallery.style.transform = `translateX(${slideAmount}%)`;
       }
     });
@@ -298,7 +298,7 @@
       <div class="biography-text">
         <h1>Hi, I'm Tiago Miranda</h1>
         <p>
-          I am a student currently enrolled in a Masters Degree in Engineering and Data Science in Instituto Superior Técnico in Lisbon, Portugal. I'm deeply interested in using data to understand ourselves and others better to make a fairer and more empathetic society. I love working on personal projects and exploring new technologies.
+          I am a student currently enrolled in the Masters Degree in Engineering and Data Science in Instituto Superior Técnico in Lisbon, Portugal. I'm deeply interested in using data to understand ourselves and others better to make a fairer and more empathetic society. I love working on personal projects and exploring new technologies.
         </p>
       </div>
     </div>
@@ -319,7 +319,7 @@
        
       </div>
       <div class="project-image">
-        <img src="banana_tinder.png" alt="Project Image 1">
+        <img src="Banana_project/banana_tinder.png" alt="Project Image 1">
       </div>
     </div>
 
@@ -443,5 +443,28 @@
       <button class="next-button">Next</button>
     </div>
   </div>
+
+
+  <script>
+    function setEqualHeight() {
+      const smallProjectContainers = document.querySelectorAll('.small-projects-container');
+      let maxHeight = 0;
+
+      smallProjectContainers.forEach(container => {
+        const containerHeight = container.clientHeight;
+        maxHeight = Math.max(maxHeight, containerHeight);
+      });
+
+      smallProjectContainers.forEach(container => {
+        container.style.height = maxHeight + 'px';
+      });
+    }
+
+    // Call the function when the page loads and on window resize
+    window.addEventListener('load', setEqualHeight);
+    window.addEventListener('resize', setEqualHeight);
+  </script>
+
+
 </body>
 </html>
