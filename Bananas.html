@@ -208,21 +208,42 @@
 
 
 <div class="project-info">
-  <div class="project-title">Banana ripeness classification</div>
+  <div class="project-title">Detection and Ripeness Classification of Bananas using Deep Learning Methods</div>
   <div class="project-description">
-    <p>In </p>
+    <p>Recent advances in human civilization lead to the global availability of many different varieties of fruit and vegetables, inevitably contributing to the increase of food waste by missing the optimal consumption period of these items (from the client perspective as well as the manufacturer and reseller). This project intends to tackle this issue and aid the client or the seller to reduce food waste.</p>
+    <p> </p>
+    <p><br> The project has 3 stages: </p>
+    <p>1 – The user answers a dating app-like test to get their preferred banana ripeness stage. </p>
+    <p>2 – We classify the banana provided (the user uploads a photo of it) according to its ripeness stage. </p>
+    <p>3 – We predict the time it would take for that banana to reach the desired ripeness level obtained in step 1. </p>
+    <p> </p>
+    <p><br> To complete step 2 we classify the banana using a CNN (Convolutional Neural Network). We trained the CNN using publicly available data as well as a manually labelled dataset built by ourselves. To improve accuracy scores in the classification module we performed Data Pre-Processing techniques such as segmentation and cropping using the current state-of-the-Art YOLOv8 model developed by Ultralytics. </p>
+    <p> </p>
+    <p>To complete step 3 we photographed the ripeness evolution of a few bananas throughout several days. We used this data to predict the time it would take for a banana to reach a given desired ripeness level. We assumed the ripening evolution to be linear and so estimated the time needed through a linear regression.</p>
+    <p> </p>
+    <p>To make the project more accessible to the end user we developed a GUI (Graphical User Interface) using Tkinter (a Python library). </p>
+    <p> </p>
+    <p>This project helps users plan their fruit consumption by knowing when any banana will reach a  desired ripeness, thus reducing the chance of consuming it after it becomes suitable. We believe the solution proposed using this project would allow consumers to make better decisions and the industry to allocate food resources more wisely. </p>
+    <p> </p>
+    <p>Overall, the project combines deep learning techniques with an interactive GUI to address food waste by classifying the ripeness of bananas </p>
+    <p> </p>
+    <p><br><br> This project was developed by Dinis Rocha, Nuno Machado and Tiago Miranda for the Learning-Based Multimedia Processing course at Instituto Superior Técnico in Lisbon, Portugal. </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
   </div>
 </div>
 
+
+<h3 style="text-align:center">Video demonstration and presentation of the project:</h3> 
 
 <div class="video-container">
   <iframe width="640" height="360" src="https://youtube.com/embed/9w7Td4S1PgQ" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="pdf-container">
-  <embed src="Bananas_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
-</div>
 
+
+<h3 style="text-align:center">Project's GUI screenshots:</h3> 
 <div class="sliding-gallery show-first">
   <div class="gallery-container">
     <div class="container">
@@ -249,6 +270,11 @@
   </div>
 </div>
 
+
+<h3 style="text-align:center">Project's slideshow presentation:</h3> 
+<div class="pdf-container">
+  <embed src="Bananas_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
+</div>
 
 </body>
 </html>
