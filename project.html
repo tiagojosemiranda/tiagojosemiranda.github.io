@@ -84,7 +84,7 @@
   .sliding-gallery {
       align-items: center; /* Center the content vertically */
       overflow: hidden; /* Hide the content that overflows the container */
-      width: 65%; /* Occupy the full width of the parent container */
+      width: 75%; /* Occupy the full width of the parent container */
       position: relative; /* To position the navigation buttons */
       margin: 0 auto; /* Center the gallery horizontally */
       justify-content: center; /* Center the projects horizontally */
@@ -95,7 +95,7 @@
       display: flex; /* Make the projects side by side */
       justify-content: center; /* Center the projects horizontally */
       transition: transform 0.5s; /* Add a smooth transition effect for sliding */
-      width: 250%; /* Double the width to accommodate both project containers */
+      width: 200%; /* Double the width to accommodate both project containers */
     }
 
     .gallery-container .container {
@@ -171,7 +171,7 @@
       });
 
       function updateGallery() {
-        const slideAmount = currentIndex * -40;
+        const slideAmount = currentIndex * -50;
         gallery.style.transform = `translateX(${slideAmount}%)`;
       }
     });
@@ -201,22 +201,25 @@
 <div class="sliding-gallery show-first">
   <div class="gallery-container">
     <div class="container">
-      <img class="slide-image" src="Banana_project/banana_tinder.png" alt="Image 1">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela0.png" alt="Image 1">
     </div>
     <div class="container">
-      <img class="slide-image" src="Banana_project/banana_class_without.png" alt="Image 2">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela1.png" alt="Image 2">
     </div>
     <div class="container">
-      <img class="slide-image" src="Banana_project/banana_class_working.png" alt="Image 3">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela 2.png" alt="Image 3">
     </div>
     <div class="container">
-      <img class="slide-image" src="Banana_project/banana_time_machine.png" alt="Image 4">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela 3.png" alt="Image 4">
     </div>
     <div class="container">
-      <img class="slide-image" src="Banana_project/banana_about.png" alt="Image 5">
+      <img class="slide-image" src="Biased_New_World_images/spotify janela4.png" alt="Image 5">
     </div>
-    <!-- Add more containers with images here as needed -->
+    <div class="container">
+      <img class="slide-image" src="Biased_New_World_images/spotify janeal5.png" alt="Image 6">
+    </div>
   </div>
+
 
   <!-- Navigation buttons -->
   <div class="navigation-buttons">
