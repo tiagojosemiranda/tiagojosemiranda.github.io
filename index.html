@@ -57,50 +57,48 @@
     text-decoration: none; /* Remove underline */
   }
 
-    .biography {
-      display: flex;
-      justify-content: center; /* Center the content horizontally */
-      margin: 110px; /* Added more padding around the biography */
-      text-align: center;
-    }
+  .biography-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 70px auto;
+  }
 
-    .biography-container {
-      width: 100%;
-      display: flex; /* Use flexbox to arrange the image and text side by side */
-      align-items: center; /* Center the content vertically */
-      max-width: 1200px; /* Increased the width of the container */
-      margin: 0 auto; /* Center the container horizontally and extend to the edges of the window */
-      text-align: left;
-    }
+  .biography {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
 
-    .biography img {
-      height: 300px;
-      width: auto; /* Set a fixed width to create an oval shape */
-      border-radius: 50%; /* Set border-radius to 50% to make it oval, to 0% to make it rectangular */
-      border: 0px solid #000; /* Add a black contour with 5px width */
-      margin-right: 130px;
-    }
+  .biography img {
+    height: 300px;
+    width: auto;
+    border-radius: 50%;
+    border: 0px solid #000;
+    margin-right: 150px;
+  }
 
-    .biography-text {
-      width: 60%;
-    }
+  .biography-text {
+    width: 60%;
+  }
 
-    .biography-text h1 {
-      font-size: 56px; /* Increased the font size of the "Hi, I'm Tiago Miranda" text */
-      font-weight: bold;
-      color: #000; /* Set the text color to black */
-      margin-bottom: 40px;
-    }
+  .biography-text h1 {
+    font-size: 56px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+  }
 
-    .biography-text p {
-      font-size: 16px;
-      color: #000; /* Set the text color to black */
-      margin-bottom: 10px;
-    }
+  .biography-text p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+  }
 
     .projects-title {
       font-size: 32px;
       font-weight: bold;
+      margin-top: 120px;
       margin-bottom: 20px;
       text-align: center;
       color: #000; /* Set the text color to black */
@@ -296,17 +294,15 @@
     <a class="cv-button" href="https://tiagojosemiranda.github.io/CV_Tiago_Miranda.pdf" target="_blank">CV</a>
 </div>
 
+<div class="biography-container">
   <div class="biography">
-    <div class="biography-container">
-      <img src="your_photo.jpg" alt="Your Photo">
-      <div class="biography-text">
-        <h1>Hi, I'm Tiago Miranda</h1>
-        <p>
-          I am a student currently enrolled in the Masters Degree in Engineering and Data Science at Instituto Superior Técnico in Lisbon, Portugal. I'm deeply interested in using data to understand ourselves and others better to make a fairer and more empathetic society. I love working on personal projects and exploring new technologies.
-        </p>
-      </div>
+    <img src="your_photo.jpg" alt="Your Photo">
+    <div class="biography-text">
+      <h1>Hi, I'm Tiago Miranda</h1>
+      <p>I am a student currently enrolled in the Masters Degree in Engineering and Data Science at Instituto Superior Técnico in Lisbon, Portugal. I'm deeply interested in using data to understand ourselves and others better to make a fairer and more empathetic society. I love working on personal projects and exploring new technologies.</p>
     </div>
   </div>
+</div>
 
   <div class="container-wrapper">
     <h2 class="projects-title">Projects</h2>
