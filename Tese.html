@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Video segmentation</title>
+  <title>Master's thesis</title>
   <style>
     body {
       margin: 0;
@@ -133,23 +133,19 @@
 
 
 <div class="project-info">
-  <div class="project-title">Video coverage segmentation</div>
+  <div class="project-title">Using embeddings to infer diagnostics from medical prescriptions</div>
   <div class="project-description">
-    <p>Large outdoor events like the bicycle race Giro D’Italia follow complex but very well planned “scripts” by the producer/director of the coverage. In particular the director is managing different viewpoints originated from a multitude of video sources such as motorbikes, fixed cameras, drones or helicopters and, at each time instant, they select the best video feed for the viewer. The goal of the project is to automate the classification of each data frame in a set of “type of shots”. These results could then be used to train a model to eventually aid or substitute the director. In this project we focus only on clustering the video data available. </p>
+    <p>Medical records are an important tool to assess the health status of populations. One example of such data are medical prescriptions, which have increasingly migrated from paper to digital records. The main goals of prescriptions are: providing patients with instructions about their care, controlling the sale of substances with potential side-effects when used off-label, and keeping track of expenses. At the same time, they are a rich dataset to glimpse into the health status of populations, as well as the prescribing habits of medical doctors. However, they are often not associated with information on diagnostics.</p>
     <p> </p>
-    <p>The data consisted of video embeddings of each frame (obtained feeding video frames to VGGNet) as well as cyclists’ skeleton data (obtained using 2 pose estimation methods: Openpose and Otherpose).  </p>
+    <p>In this project, we want to harness the ability of neural embeddings to identify relationships between elements to estimate the prevalence of chronic disease. We will make use of the database of electronic prescriptions in Portugal, which covers over 95% of all prescriptions since 2017. It includes 244 million prescriptions to 12 million distinct patients between January 2017 and December 2021. With these data, we will train embedding models using the list of drugs prescribed to each patient. We will then identify groups of co-prescribed drugs and evaluate whether or not they correspond to specific diseases.   </p>
     <p> </p>
-    <p>To cluster the video data available we developed the following pipeline: EDA (Exploratory Data Analysis), Missing values imputation, Dealing with outliers, Dimensionality reduction and Clustering.  </p>
+    <p>As a ground-truth dataset, we will use lists of drugs that have been manually cured by an expert and which correspond five medical conditions - diabetes, asthma + COPD, coronary heart disease, chronic liver disease and chronic neurological disease. This will require identifying the best hyperparameters and designing and improving a clustering algorithm able to capture the variability in the data (namely different number of drugs per disease and different distances between them).  </p>
     <p> </p>
-    <p>Most notably, the missing value imputation was performed using GLRM (Generalized Low Rank Models) given the low rank of the data using the H2o Python library. To reduce the dimensionality of the data we also performed SVD (Singular Value Decomposition) from which we obtained a basis for our dataset. From this, to detect outliers, we calculated the distance of each datapoint to the null space of the basis obtained. Lastly, the clustering was performed using Hierarchical clustering methods. Given this is an Unsupervised Learning problem the number of clusters present in the data was also estimated from it.  </p>
+    <p>Once the algorithm is fine tuned, we will be able to analyse the prevalence of different diseases in the Portuguese population and the role of the Covid-19 pandemic in the number of new diagnostics.  </p>
     <p> </p>
-    <p><br><br>This project was developed by Tiago Miranda and Vasco Carneiro for the Processing Big Data course at Instituto Superior Técnico in Lisbon, Portugal. </p>    
-    </div>
-</div>
-
-<h3 style="text-align:center">Project's slideshow presentation:</h3> 
-<div class="pdf-container">
-  <embed src="Giro_Presentation.pdf#toolbar=0" width="800" height="1000" type="application/pdf">
+    <p><br><br><br>The Master's thesis will be developed in the 2nd semester of 2023/2024. The project will be co-supervised by LIP researchers Lilia Perfeito and Joana Gonçalves-Sá, both from the SPAC Lab ( https://socialcomplexity.eu ) at LIP, and by Bruno Martins ( http://web.ist.utl.pt/bruno.g.martins/ ) from IST and INESC-ID. </p>    
+    <br><br><br><br><br><br>
+  </div>
 </div>
 
 
